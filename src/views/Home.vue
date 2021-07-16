@@ -25,7 +25,7 @@ export default {
       cards: [
         {
           id: 1,
-          img: "/img/img-id1.jpg",
+          img: "img/img-id1.jpg",
           name: "«Рождение Венеры»",
           author: "Сандро Боттичелли",
           price: {
@@ -35,7 +35,7 @@ export default {
         },
         {
           id: 2,
-          img: "/img/img-id2.jpg",
+          img: "img/img-id2.jpg",
           name: "«Тайная вечеря»",
           author: "Леонардо да Винчи",
           price: {
@@ -45,7 +45,7 @@ export default {
         },
         {
           id: 3,
-          img: "/img/img-id3.jpg",
+          img: "img/img-id3.jpg",
           name: "«Сотворение Адама»",
           author: "Микеланджело",
           price: {
@@ -55,7 +55,7 @@ export default {
         },
         {
           id: 4,
-          img: "/img/img-id4.jpg",
+          img: "img/img-id4.jpg",
           name: "«Урок анатомии»",
           author: "Рембрандт",
           price: {
@@ -81,6 +81,7 @@ export default {
   },
   mounted() {
     if (localStorage?.cart) this.cart = JSON.parse(localStorage.cart);
+    console.log(this.$router.options.base);
   },
 };
 </script>

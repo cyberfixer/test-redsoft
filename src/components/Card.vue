@@ -1,7 +1,10 @@
 <template>
   <div class="app-card" :class="{ 'app-card-disabled': !item.price.curr }">
     <header class="app-card__img">
-      <img :src="item.img" :alt="`${item.author} ${item.name}`" />
+      <img
+        :src="`${$router.options.base}${item.img}`"
+        :alt="`${item.author} ${item.name}`"
+      />
     </header>
     <div class="app-card__content">
       <h2>{{ item.name }}<br />{{ item.author }}</h2>
