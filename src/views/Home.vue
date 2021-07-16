@@ -1,5 +1,5 @@
 <template>
-  <div class="home container">
+  <section class="home container">
     <h1>Картины эпохи Возрождения</h1>
     <main class="app-cards">
       <Card
@@ -10,7 +10,7 @@
         :inCart="cart[`${card.id}`]"
       />
     </main>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -81,22 +81,22 @@ export default {
   },
   mounted() {
     if (localStorage?.cart) this.cart = JSON.parse(localStorage.cart);
-    console.log(this.$router.options.base);
   },
 };
 </script>
 
 <style lang="scss">
 .home {
+  min-height: 480px;
   height: 100%;
   h1 {
     margin: 45px 0 39px;
   }
 }
 .app-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 280px);
-  grid-auto-rows: 328px;
-  column-gap: 28px;
+  display: flex;
+  & > *:not(:last-of-type) {
+    margin-right: 28px;
+  }
 }
 </style>

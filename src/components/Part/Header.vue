@@ -22,12 +22,14 @@ export default {
 </script>
 
 <style lang="scss">
+$border: #e1e1e1;
+
 .app-header {
   width: 100%;
-  height: 96px;
-  border-bottom: 2px solid var(--border);
+  min-height: 96px;
+  border-bottom: 2px solid $border;
   &__content {
-    height: inherit;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +42,7 @@ export default {
       height: inherit;
       font-family: "Merriweather", serif;
       font-size: 14px;
-      border: 1px solid var(--border);
+      border: 1px solid $border;
       background: transparent;
       outline: none;
       padding-left: 16px;

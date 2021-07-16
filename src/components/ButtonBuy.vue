@@ -27,6 +27,9 @@ export default {
 </script>
 
 <style lang="scss">
+$btn-normal: #403432;
+$btn-incart: #5b3a32;
+
 .app-button-buy {
   svg {
     width: inherit;
@@ -41,19 +44,19 @@ export default {
       }
     }
     circle {
-      --offset: 100;
+      $offset: 100;
       width: 100%;
       height: 100%;
       fill: none;
       stroke-width: 4;
       stroke: white;
       stroke-linecap: round;
-      stroke-dasharray: var(--offset);
-      stroke-dashoffset: var(--offset);
+      stroke-dasharray: $offset;
+      stroke-dashoffset: $offset;
       animation: animate 4s linear infinite;
       @keyframes animate {
         0% {
-          stroke-dashoffset: var(--offset);
+          stroke-dashoffset: $offset;
         }
         100% {
           stroke-dashoffset: 0;
@@ -62,7 +65,7 @@ export default {
     }
   }
   &-incart {
-    background-color: var(--btn-incart);
+    background-color: $btn-incart;
     position: relative;
     padding-left: 17px;
     &::before {

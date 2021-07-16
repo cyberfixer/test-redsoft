@@ -61,11 +61,13 @@ export default {
   methods: {
     async buyHandler(id) {
       this.isLoading = true;
-      const response = await fetch(
+      console.log(this.axios);
+      const response = await this.axios(
         "https://jsonplaceholder.typicode.com/posts/1"
       );
       this.isLoading = false;
-      if (response.ok) {
+      console.log(response);
+      if (response.status === 200) {
         this.$emit("toCart", id);
       }
     },
@@ -74,8 +76,11 @@ export default {
 </script>
 
 <style lang="scss">
+$border: #e1e1e1;
+$price-prev: #a0a0a0;
+
 .app-card {
-  border: 1px solid var(--border);
+  border: 1px solid $border;
   &__img {
     width: 100%;
     height: 160px;
@@ -100,7 +105,7 @@ export default {
     h5 {
       width: 100%;
       text-decoration: line-through;
-      color: var(--price-prev);
+      color: $price-prev;
     }
   }
   &.app-card-disabled {

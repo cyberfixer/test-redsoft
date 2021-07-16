@@ -19,6 +19,10 @@ export default {
 </script>
 
 <style lang="scss">
+$background: #f6f3f3;
+$text: #343030;
+$border: #e1e1e1;
+$btn-normal: #403432;
 * {
   margin: 0;
   padding: 0;
@@ -28,20 +32,12 @@ export default {
     box-sizing: border-box;
   }
 }
-body {
-  --background: #f6f3f3;
-  --text: #343030;
-  --border: #e1e1e1;
-  --price-prev: #a0a0a0;
-  --btn-normal: #403432;
-  --btn-incart: #5b3a32;
-  --footer-back: #eceaea;
-  --footer-text: #555555;
 
+body {
   font-family: "Merriweather", serif;
   font-size: 14px;
-  background-color: var(--background);
-  color: var(--text);
+  background-color: $background;
+  color: $text;
 }
 
 #app {
@@ -84,7 +80,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: var(--text);
+  color: $text;
 }
 
 button {
@@ -92,7 +88,7 @@ button {
   height: inherit;
   font-family: "Merriweather", serif;
   font-size: 14px;
-  background-color: var(--btn-normal);
+  background-color: $btn-normal;
   color: white;
   border: none;
   cursor: pointer;

@@ -28,18 +28,21 @@ export default {
 </script>
 
 <style lang="scss">
+$footer-back: #eceaea;
+$footer-text: #555555;
+
 .app-footer {
   width: 100%;
-  height: 96px;
+  min-height: 96px;
 
-  background-color: var(--footer-back);
+  background-color: $footer-back;
   &__content {
-    height: inherit;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     a {
-      color: var(--footer-text);
+      color: $footer-text;
     }
   }
   &__contacts {
