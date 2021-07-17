@@ -98,5 +98,8 @@ export default {
   & > *:not(:last-of-type) {
     margin-right: 28px;
   }
+  .app-card {
+    width: 280px;
+  }
 }
 </style>

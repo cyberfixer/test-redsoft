@@ -1,11 +1,11 @@
 <template>
   <div class="app-card" :class="{ 'app-card-disabled': !item.price.curr }">
-    <header class="app-card__img">
+    <div class="app-card__img">
       <img
         :src="`${$router.options.base}${item.img}`"
         :alt="`${item.author} ${item.name}`"
       />
-    </header>
+    </div>
     <div class="app-card__content">
       <h2>{{ item.name }}<br />{{ item.author }}</h2>
       <footer class="app-card__footer">
@@ -81,9 +81,13 @@ $price-prev: #a0a0a0;
 
 .app-card {
   border: 1px solid $border;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__img {
     width: 100%;
-    height: 160px;
+    min-height: 160px;
+
     img {
       width: 100%;
       height: 100%;
@@ -91,7 +95,8 @@ $price-prev: #a0a0a0;
     }
   }
   &__content {
-    height: 168px;
+    height: 100%;
+    min-height: 168px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
